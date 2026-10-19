@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ProductList from './components/ProductList.jsx'
 
 function App() {
   const [showProducts, setShowProducts] = useState(true)
@@ -23,6 +24,8 @@ function App() {
       />
 
       <p>Hello, {name}</p>
+
+      {showProducts && <ProductList />}
     </div>
   )
 }
