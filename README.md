@@ -1,16 +1,25 @@
-# React + Vite
+# React Product Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This is my assignment for the React part of the course. It's a simple
+dashboard thing with a list of products, a button to show/hide them, and
+a text input where you type your name and it shows up below. Everything
+is just hardcoded data, nothing fancy, no fetching or anything.
 
-Currently, two official plugins are available:
+## Files
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- App.jsx - this is the main one, has the state stuff (show/hide and the
+  name you type) and renders everything else
+- components/ProductList.jsx - has the list of products in it (just made
+  up some laptop/phone/tablet stuff) and loops through them with map
+- components/Product.jsx - shows one product, just gets title and price
+  as props, doesn't do anything else really
+- components/Card.jsx - just a wrapper with a border around it basically,
+  doesn't know or care what's inside
 
-## React Compiler
+## Stuff I struggled with
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+While working on App.jsx I ran the dev server and only the heading
+showed up, no button, no input, nothing. I was confused for a bit and
+thought I broke something, turned out I just hadn't actually saved/
+re-ran things properly after editing the file. Once I ran it again
+everything showed up fine. Small thing but it threw me off for a minute.
